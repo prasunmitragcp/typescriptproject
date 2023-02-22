@@ -15,5 +15,11 @@ jobs:
 
     - name: Install dependencies
       run: npm ci
+  test_job_1:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Unit Tests
+      run: npm install && npm test -- --coverage  
 
 
